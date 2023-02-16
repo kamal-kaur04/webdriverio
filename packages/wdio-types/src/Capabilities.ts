@@ -164,6 +164,8 @@ export interface VendorExtensions extends EdgeCapabilities, AppiumW3CCapabilitie
      * @private
      */
     'browserstack.wdioService'?: string
+    'browserstack.buildIdentifier'?: string
+    'browserstack.localIdentifier'?: string
 
     'goog:chromeOptions'?: ChromeOptions
     'moz:firefoxOptions'?: FirefoxOptions
@@ -180,6 +182,10 @@ export interface VendorExtensions extends EdgeCapabilities, AppiumW3CCapabilitie
     // Windows Application Driver
     'ms:experimental-webdriver'?: boolean
     'ms:waitForAppLaunch'?: string
+
+    // Windows Application Driver
+    'ms:experimental-webdriver'?: boolean;
+    'ms:waitForAppLaunch'?: string;
 
     // Safari specific
     'safari.options'?: {
@@ -1293,6 +1299,12 @@ export interface BrowserStackCapabilities {
      * @private
      */
     wdioService?: string
+    /**
+     * Specify an identifier for a build consists group of tests.
+     */
+    buildIdentifier?: string
+    'browserstack.buildIdentifier'?: string
+    'browserstack.localIdentifier'?: string
 }
 
 export interface SauceLabsVisualCapabilities {
